@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="외국인·이주노동자 금융정착 온보딩·대시보드·보험관리·송금비교 웹 프로토타입" />
+    <title>첫금융 | 외국인 금융정착 안내</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">￦</div>
+          <div><strong>첫금융</strong><span id="brand-subtitle">외국인 금융정착 안내</span></div>
+        </div>
+
+        <div class="progress-box">
+          <div><span id="progress-label">진행률</span><strong id="step-count">1 / 7</strong></div>
+          <div class="progress-track"><span id="progress-bar"></span></div>
+        </div>
+
+        <nav id="step-nav" aria-label="온보딩 단계"></nav>
+
+        <p class="demo-note" id="demo-note">은행 추천·서류 판정과 보험 D-day는<br />실데이터 기준 로직이지만, 화면 입력값은<br />데모 확인용입니다.</p>
+      </aside>
+
+      <section class="workspace">
+        <header class="topbar">
+          <div><span id="step-label">STEP 1</span><strong id="step-title">기본 정보</strong></div>
+          <select id="language-badge" class="top-language-select" aria-label="Language">
+            <option value="한국어">한국어</option>
+            <option value="English">English</option>
+            <option value="中文">中文</option>
+            <option value="Tiếng Việt">Tiếng Việt</option>
+          </select>
+        </header>
+
+        <div id="lang-fallback-banner" class="lang-fallback-banner" hidden>
+          ⚠️ 태국어(ไทย)는 아직 MVP 단계에서 지원되지 않아요. 화면은 한국어로 표시됩니다. — Thai isn't supported in this MVP yet. Showing Korean instead.
+        </div>
+
+        <div class="content"><div id="screen" class="screen"></div></div>
+
+        <footer class="actions">
+          <button id="back-button" class="button button-secondary" type="button">← 이전</button>
+          <button id="next-button" class="button button-primary" type="button">다음 단계 →</button>
+        </footer>
+      </section>
+    </main>
+    <div id="ai-assistant-root"></div>
+    <script src="remittance_data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
