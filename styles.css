@@ -62,6 +62,8 @@ body {
   background: var(--canvas);
   color: var(--ink);
   font-family: Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", Arial, sans-serif;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 button, input, select { font: inherit; }
 button { cursor: pointer; }
